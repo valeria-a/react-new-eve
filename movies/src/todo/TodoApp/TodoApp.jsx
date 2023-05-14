@@ -8,18 +8,33 @@ const TodoApp = () => {
 
     const [tasks, setTasks] = useState([])
 
-    const addTaskHandler = (newTask) => {
+    const addTaskHandler = (newTaskTitle) => {
+        const newTask = {
+            id: Date.now(),
+            title: newTaskTitle
+        }
         setTasks([...tasks, newTask])
     }
 
-    const deleteTaskHandler = (taskToDelete) => {
-        setTasks(tasks.filter((task) => task !== taskToDelete))
+    const deleteTaskHandler = (taskId) => {
+        setTasks(tasks.filter((task) => task.id !== taskId))
+    }
+
+    const saveEditedTaskHandler = (taskId, newTitle) => {
+        const myTask = tasks.filter((task) => task.id === taskId)[0]
+        myTask.title = newTitle
+        setTasks([...tasks])
     }
 
     return(
         <div style={{display: 'flex', flexDirection: 'column'}}>
             <TaskForm onTaskAdd={addTaskHandler}/>
-            <TaskList tasks={tasks} onTaskDelete={deleteTaskHandler}/>
+            <TaskList 
+                tasks={tasks} 
+                onTaskDelete={deleteTaskHandler}
+                onTaskSave={saveEditedTaskHandler}
+
+            />
         </div>
     )
 }

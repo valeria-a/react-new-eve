@@ -1,10 +1,13 @@
 import { useState } from "react";
 import Task from "../Task/Task";
 
-const TaskList = ({tasks, onTaskDelete}) => {
+const TaskList = ({tasks, onTaskDelete, onTaskSave}) => {
 
-    const items = tasks.map((task, i) => {
-        return <Task key={i} title={task} onTaskDelete={onTaskDelete}/>
+    const items = tasks.map((task) => {
+        return <Task key={task.id} 
+                    task={task} 
+                    onTaskDelete={onTaskDelete}
+                    onTaskSave={onTaskSave}/>
     })
 
     return (
