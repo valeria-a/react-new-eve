@@ -1,0 +1,14 @@
+.rounded-img {
+    border-radius: 15px;
+    width: 200px;
+}
+
+.img-card {
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    border: 2px grey solid;
+    border-radius: 15px;
+    margin: 15px;
+    width: fit-content;
+}
