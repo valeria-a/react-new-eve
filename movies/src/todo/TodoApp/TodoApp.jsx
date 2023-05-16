@@ -3,6 +3,7 @@ import TaskForm from "../TaskForm/TaskForm";
 import TaskList from "../TaskList/TaskList";
 
 import './TodoApp.css'
+import { Box } from "../../utils/Box";
 
 const TodoApp = () => {
 
@@ -27,7 +28,8 @@ const TodoApp = () => {
     }
 
     return(
-        <div style={{display: 'flex', flexDirection: 'column'}}>
+        <>
+        <Box>
             <TaskForm onTaskAdd={addTaskHandler}/>
             <TaskList 
                 tasks={tasks} 
@@ -35,7 +37,12 @@ const TodoApp = () => {
                 onTaskSave={saveEditedTaskHandler}
 
             />
-        </div>
+        </Box>
+        <Box>
+            <button>HELLO</button>
+        </Box>
+
+        </>
     )
 }
 export default TodoApp;

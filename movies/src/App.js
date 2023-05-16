@@ -3,6 +3,7 @@ import './App.css';
 import MovieCard from './MovieCard/MovieCard';
 import { MOVIES } from './data';
 import TodoApp from './todo/TodoApp/TodoApp';
+import DogsApp from './dogs/DogsApp/DogsApp';
 
 function App() {
 
@@ -19,7 +20,8 @@ function App() {
   // )
   
   return (
-    <TodoApp />
+    // <TodoApp />
+    <DogsApp />
   )
 
 
