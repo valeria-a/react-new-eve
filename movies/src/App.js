@@ -1,9 +1,10 @@
-import './App.css';
-import TodoApp from './todo/TodoApp/TodoApp';
+// import './App.css';
+// import TodoApp from './todo/TodoApp/TodoApp';
 import DogsApp from './dogs/DogsApp/DogsApp';
-import MoviesApp from './movies/MoviesApp/MoviesApp';
-import SyncInput from './simpleTutorials/SyncInput';
-import FilterableList from './simpleTutorials/FilterableList';
+// import MoviesApp from './movies/MoviesApp/MoviesApp';
+// import SyncInput from './simpleTutorials/SyncInput';
+// import FilterableList from './simpleTutorials/FilterableList';
+// import Counter from './counter/Counter';
 
 function App() {
 
@@ -12,9 +13,10 @@ function App() {
   return (
     // <MoviesApp />
     // <TodoApp />
-    // <DogsApp />
+    <DogsApp />
     // <SyncInput />
-    <FilterableList />
+    // <FilterableList />
+    // <Counter />
 
   )
 
