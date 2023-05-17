@@ -4,6 +4,7 @@ import DogPicture from '../DogPicture/DogPicture';
 import { useState } from 'react';
 import axios from 'axios';
 import { LinearProgress } from '@mui/material';
+import Gallery from '../DogsGallery/Gallery';
 
 const URL = "https://random.dog/woof.json"
 
@@ -49,17 +50,7 @@ const DogsApp = () => {
                 <DogPicture url={url} onImgLoaded={() => setLoading(false)}/>
             }
 
-            {url && !loading &&
-                <Stack spacing={2} direction="row" 
-                    sx={{justifyContent: "center"}}>
-                    <Button>
-                        SAVE
-                    </Button>
-                    <Button>
-                        DISCARD
-                    </Button>
-                </Stack>
-            }
+            <Gallery url={url} loading={loading} onDiscard={() => setUrl(null)}/>
         
         </Stack>
     )
