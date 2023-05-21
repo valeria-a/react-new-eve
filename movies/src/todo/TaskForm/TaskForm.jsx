@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const TaskForm = ({onTaskAdd}) => {
+const TaskForm = ({dispatch}) => {
 
     console.log('rendering TaskForm')
 
@@ -9,7 +9,11 @@ const TaskForm = ({onTaskAdd}) => {
     const handleSubmit = (event) => {
         event.preventDefault()
         console.log(taskValue)
-        onTaskAdd(taskValue)
+        // onTaskAdd(taskValue)
+        dispatch({
+            type: 'addTask',
+            context: {title: taskValue}
+        })
         setTaskValue('')
     }
 

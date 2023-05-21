@@ -1,5 +1,5 @@
 // import './App.css';
-// import TodoApp from './todo/TodoApp/TodoApp';
+import TodoApp from './todo/TodoApp/TodoApp';
 // import DogsApp from './dogs/DogsApp/DogsApp';
 // import MoviesApp from './movies/MoviesApp/MoviesApp';
 // import SyncInput from './simpleTutorials/SyncInput';
@@ -10,7 +10,9 @@
 
 // import QuoteApp from "./effectExercises/quote/QuoteApp";
 
-import BioApp from "./effectExercises/fetchBio/BioApp";
+// import BioApp from "./effectExercises/fetchBio/BioApp";
+// import React99App from "./react99/React99App";
+// import RefTimerApp from "./effectExercises/refs/timer/RefTimerApp";
 // import NationalizeApp from "./effectExercises/nationalize/NationalizeApp";
 // import FormFocusApp from "./effectExercises/refs/formFocus/FormFocusApp";
 
@@ -20,16 +22,18 @@ function App() {
   
   return (
     // <MoviesApp />
-    // <TodoApp />
+    <TodoApp />
     // <DogsApp />
     // <SyncInput />
     // <FilterableList />
     // <Counter />
-    <BioApp />
+    // <BioApp />
     // <NationalizeApp />
     // <FormFocusApp />
     // <QuoteApp />
     // <TimerApp />
+    // <RefTimerApp />
+    // <React99App />
   )
 
 

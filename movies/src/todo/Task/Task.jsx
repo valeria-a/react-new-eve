@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Task = ({task, onTaskDelete, onTaskSave}) => {
+const Task = ({task, dispatch}) => {
 
     // just to get the initial title to display
     const [title, setTitle] = useState(task.title)
@@ -9,7 +9,11 @@ const Task = ({task, onTaskDelete, onTaskSave}) => {
 
     const handleEditSave = () => {
         if (editing) {
-            onTaskSave(task.id, title)
+            // onTaskSave(task.id, title)
+            dispatch({
+                type: 'editTask',
+                context: {id: task.id, title: title}
+            })
         }
         setEditing(prev => !prev)
     }
@@ -20,7 +24,11 @@ const Task = ({task, onTaskDelete, onTaskSave}) => {
             setEditing(false)
             setTitle(task.title)
         } else {
-            onTaskDelete(task.id)
+            // onTaskDelete(task.id)
+            dispatch({
+                type: 'deleteTask',
+                context: {id: task.id}
+            })
         }
     }
 

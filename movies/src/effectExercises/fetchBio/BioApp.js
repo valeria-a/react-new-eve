@@ -8,10 +8,22 @@ export default function BioApp() {
 
 
   useEffect(() => {
+
+    let performSet = true
+
     setBio(null);
     fetchBio(person).then(result => {
-      setBio(result);
+      console.log('performset=', performSet, 'for ', person)
+      if (performSet) {
+        setBio(result);
+      }
     });
+
+    return () => {
+      console.log('setting performSet=false for', person)
+      performSet = false
+    }
+
   }, [person]);
 
   return (
