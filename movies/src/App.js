@@ -10,7 +10,7 @@
 
 // import QuoteApp from "./effectExercises/quote/QuoteApp";
 
-// import BioApp from "./effectExercises/fetchBio/BioApp";
+import BioApp from "./effectExercises/fetchBio/BioApp";
 // import NationalizeApp from "./effectExercises/nationalize/NationalizeApp";
 // import FormFocusApp from "./effectExercises/refs/formFocus/FormFocusApp";
 
@@ -25,7 +25,7 @@ function App() {
     // <SyncInput />
     // <FilterableList />
     // <Counter />
-    // <BioApp />
+    <BioApp />
     // <NationalizeApp />
     // <FormFocusApp />
     // <QuoteApp />

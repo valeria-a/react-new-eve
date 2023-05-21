@@ -6,6 +6,7 @@ export default function BioApp() {
   const [person, setPerson] = useState('Alice');
   const [bio, setBio] = useState(null);
 
+
   useEffect(() => {
     setBio(null);
     fetchBio(person).then(result => {
