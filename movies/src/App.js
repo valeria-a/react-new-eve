@@ -1,5 +1,7 @@
 // import './App.css';
-import TodoApp from './todo/TodoApp/TodoApp';
+import CounterApp from './counterReducer/CounterApp';
+// import StarRating from './starRating/StarRating';
+// import TodoApp from './todo/TodoApp/TodoApp';
 // import DogsApp from './dogs/DogsApp/DogsApp';
 // import MoviesApp from './movies/MoviesApp/MoviesApp';
 // import SyncInput from './simpleTutorials/SyncInput';
@@ -22,7 +24,7 @@ function App() {
   
   return (
     // <MoviesApp />
-    <TodoApp />
+    // <TodoApp />
     // <DogsApp />
     // <SyncInput />
     // <FilterableList />
@@ -34,6 +36,8 @@ function App() {
     // <TimerApp />
     // <RefTimerApp />
     // <React99App />
+    // <StarRating />
+    <CounterApp />
   )
 
 
