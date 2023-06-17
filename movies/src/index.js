@@ -18,6 +18,7 @@ import Page2 from './router1/Page2/Page2';
 import UsersPage, { loader as usersLoader } from './router1/Users/Users';
 // import UserDetailsPage, {loader as userDetailsPageLoader} from './router1/Users/UserDetailsPage';
 import UserDetails, {loader as userDetailsLoader} from './router1/Users/UserDetails';
+import DoesNotExistPage from './router1/DoesNotExistPage/DoesNotExistPage';
 
 // const router = createBrowserRouter([
 //   {
@@ -38,7 +39,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <DoesNotExistPage />,
     children: [
+      {
+        path: "/",
+        element: <Page1 />,
+      },
       {
         path: "page1",
         element: <Page1 />,
