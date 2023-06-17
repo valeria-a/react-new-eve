@@ -4,13 +4,16 @@ import TaskList from "../TaskList/TaskList";
 
 import './TodoApp.css'
 import { Box } from "../../utils/Box";
-import { todoReducer } from "./todoReducer";
+import { ColorContext, INITIAL_COLOR, UserContext, todoReducer } from "./todoReducer";
+import ColorPicker from "../ColorPick/ColorPicker";
 
 const TodoApp = () => {
 
     // const [tasks, setTasks] = useState([])
 
     const [tasks, dispatch] = useReducer(todoReducer, [])
+
+    const [color, setColor] = useState(INITIAL_COLOR)
 
 
     // const addTaskHandler = (newTaskTitle) => {
@@ -31,22 +34,28 @@ const TodoApp = () => {
     //     setTasks([...tasks])
     // }
 
+    console.log('rendering')
     return(
         <>
-        <Box>
-            {/* <TaskForm onTaskAdd={addTaskHandler}/> */}
-            <TaskForm dispatch={dispatch}/>
-            <TaskList 
-                tasks={tasks} 
-                dispatch={dispatch}
-                // onTaskDelete={deleteTaskHandler}
-                // onTaskSave={saveEditedTaskHandler}
+        <ColorContext.Provider value={[color, setColor]}>
+            <UserContext.Provider>
+                <Box>
+                    {/* <TaskForm onTaskAdd={addTaskHandler}/> */}
 
-            />
-        </Box>
-        <Box>
-            <button>HELLO</button>
-        </Box>
+                        <TaskForm dispatch={dispatch}/>
+                        <TaskList 
+                            tasks={tasks} 
+                            dispatch={dispatch}
+                            // onTaskDelete={deleteTaskHandler}
+                            // onTaskSave={saveEditedTaskHandler}
+                        />
+                </Box>
+                <Box>
+                    {/* <button onClick={() => setColor('red')}>SWITCH COLOR</button> */}
+                    <ColorPicker/>
+                </Box>
+            </UserContext.Provider>
+        </ColorContext.Provider>
 
         </>
     )

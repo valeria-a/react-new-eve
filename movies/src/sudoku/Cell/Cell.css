@@ -1,0 +1,5 @@
+.cell {
+    display: flex;
+    padding: 5px;
+    border: solid 1px grey;
+}

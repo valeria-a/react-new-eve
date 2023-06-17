@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Task from "../Task/Task";
+import ColorPicker from "../ColorPick/ColorPicker";
 
-const TaskList = ({tasks, dispatch}) => {
+const TaskList = ({tasks, dispatch, onColorChange}) => {
 
     const items = tasks.map((task) => {
         return <Task key={task.id} 
@@ -15,6 +16,7 @@ const TaskList = ({tasks, dispatch}) => {
     return (
         <ul>
             {items}
+            <ColorPicker onColorChange={onColorChange}/>
         </ul>
     )
 }

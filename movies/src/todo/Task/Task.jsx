@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ColorContext } from "../TodoApp/todoReducer";
 
 const Task = ({task, dispatch}) => {
 
     // just to get the initial title to display
     const [title, setTitle] = useState(task.title)
+    const color = useContext(ColorContext)
 
     const [editing, setEditing] = useState(false)
 
@@ -43,10 +45,10 @@ const Task = ({task, dispatch}) => {
             <p style={{flexGrow: 1}}>{task.title}</p>
             }
 
-            <button onClick={handleCancelDelete}>
+            <button style={{color: color}} onClick={handleCancelDelete}>
                 {editing ? 'CANCEL' : 'DELETE'}
             </button>
-            <button onClick={handleEditSave}>
+            <button style={{color: color}} onClick={handleEditSave}>
                 {editing ? 'SAVE' : 'EDIT'}
             </button>
         </li>

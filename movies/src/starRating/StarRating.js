@@ -33,7 +33,7 @@ const StarRating = () => {
   );
 };
 
-const Star = ({ filled, ...rest }) => (
+const Star = ({ filled, ...rest}) => (
   <span
     {...rest}
     style={{ color: filled ? 'orange' : 'grey', cursor: 'pointer' }}

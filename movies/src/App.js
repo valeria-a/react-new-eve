@@ -1,5 +1,5 @@
 // import './App.css';
-import CounterApp from './counterReducer/CounterApp';
+// import CounterApp from './counterReducer/CounterApp';
 // import StarRating from './starRating/StarRating';
 // import TodoApp from './todo/TodoApp/TodoApp';
 // import DogsApp from './dogs/DogsApp/DogsApp';
@@ -7,6 +7,16 @@ import CounterApp from './counterReducer/CounterApp';
 // import SyncInput from './simpleTutorials/SyncInput';
 // import FilterableList from './simpleTutorials/FilterableList';
 // import Counter from './counter/Counter';
+
+import RouterApp from "./router1/RouterApp/RouterApp";
+
+// import TodoAppAdvanced from "./todoAdvanced/TodoAppAdvanced/TodoAppAdvanced";
+// import TodoAppAdvancedDemo from "./todoAdvancedDemo/TodoAppAdvancedDemo/TodoAppAdvancedDemo";
+
+
+// import TodoAppClean from "./todoClean/TodoAppClean/TodoAppClean";
+
+// import SudokuApp from "./sudoku/SudokuApp/SudokuApp.jsx";
 
 // import TimerApp from "./effectExercises/timer/TimerApp";
 
@@ -37,7 +47,12 @@ function App() {
     // <RefTimerApp />
     // <React99App />
     // <StarRating />
-    <CounterApp />
+    // <CounterApp />
+    // <SudokuApp />
+    // <TodoAppClean />
+    // <TodoAppAdvanced />
+    // <TodoAppAdvancedDemo />
+    <RouterApp />
   )
 
 

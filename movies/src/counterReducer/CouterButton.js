@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCirclePlus, faCircleMinus } from '@fortawesome/free-solid-svg-icons'
 
 
-const CounterButton = ({plus=true}) => {
+const CounterButton = ({plus=true, ...eventHandlers}) => {
     return(
-        <IconButton>
+        <IconButton {...eventHandlers}>
             <FontAwesomeIcon icon={plus ? faCirclePlus : faCircleMinus} />
         </IconButton>
     )

@@ -1,10 +1,12 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { ColorContext } from "../TodoApp/todoReducer"
 
 const TaskForm = ({dispatch}) => {
 
     console.log('rendering TaskForm')
 
     const [taskValue, setTaskValue] = useState('')
+    const color = useContext(ColorContext)
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -29,7 +31,7 @@ const TaskForm = ({dispatch}) => {
                 placeholder="Write your task..."
                 value={taskValue}
                 onChange={(event) => setTaskValue(event.target.value)}/>
-            <button type="submit" onClick={handleClick}>ADD</button>
+            <button style={{color: color}} type="submit" onClick={handleClick}>ADD</button>
 
         </form>
     )

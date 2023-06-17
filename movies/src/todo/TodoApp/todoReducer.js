@@ -1,3 +1,5 @@
+import { createContext } from "react"
+
 export const todoReducer = (tasks, {type, context}) => {
     switch (type) {
         case 'addTask':
@@ -13,7 +15,13 @@ export const todoReducer = (tasks, {type, context}) => {
             myTask.title = context.title
             return [...tasks]
         default:
-            throw 'Action type does not exust'
+            throw 'Action type does not exist'
     }
 }
+
+export const INITIAL_COLOR = '#222ccc'
+export const ColorContext = createContext([INITIAL_COLOR, () => {}])
+export const UserContext = createContext(null)
+
+console.log('context created')
 
